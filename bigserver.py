@@ -2,8 +2,8 @@ import socket
 import threading
 
 # Server configuration
-host = '192.168.1.3'
-port = 9999
+host = '192.168.1.3' # use your pc ip 
+port = 9999 # add anynumber like this {example: '0000','8888','8080'.......}
 
 # Function to read and send an HTML file
 def send_html_file(client, file_path):
@@ -67,9 +67,11 @@ def send_css_file(client, file_path):
 # Modify the handle_client function to check for image and CSS file requests
 def handle_client(client, address):
     print(f"Connected to {address}")
-    file_path = 'C:\\Users\\USER\\Desktop\\BasicServer\\index.html'  # Replace with your HTML file's path
-    file_image = 'C:\\Users\\USER\\Desktop\\BasicServer\\nikhil.jpg'  # Replace with the path to your image file
-    file_css = 'C:\\Users\\USER\\Desktop\\BasicServer\\styles.css'  # Replace with the path to your CSS file
+
+    
+    file_path = 'index.html'  # Replace with your HTML file's path
+    file_image = 'nikhil.jpg'  # Replace with the path to your image file
+    file_css = 'styles.css'  # Replace with the path to your CSS file
     
     # Receive the HTTP request from the client
     request = client.recv(1024).decode()
@@ -109,3 +111,11 @@ while True:
     # Create a new thread to handle the client connection
     client_thread = threading.Thread(target=handle_client, args=(client, address))
     client_thread.start()
+
+
+# comments add by me but modifiy by CHATGPT
+
+
+# Created by nikhil karmkar
+# discord UID is "karnikhil"
+# Twitter UID is "karnikhil"
