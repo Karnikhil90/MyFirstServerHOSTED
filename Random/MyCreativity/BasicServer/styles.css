@@ -1,0 +1,19 @@
+.headline {
+    color: red;
+    text-align: center;
+}
+
+.info-of-creater {
+    color: #E59866;
+    text-align: center;
+}
+
+.image-of-creater {
+    image-rendering: crispEdges;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    /* Center horizontally */
+    align-items: center;
+}
