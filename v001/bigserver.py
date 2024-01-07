@@ -2,7 +2,7 @@ import socket
 import threading
 
 # Server configuration
-host = '192.168.1.3' # use your pc ip 
+host = '192.168.0.100' # use your pc ip 
 port = 9999 # add anynumber like this {example: '0000','8888','8080'.......}
 
 # Function to read and send an HTML file
@@ -69,9 +69,9 @@ def handle_client(client, address):
     print(f"Connected to {address}")
 
     
-    file_path = 'index.html'  # Replace with your HTML file's path
-    file_image = 'nikhil.jpg'  # Replace with the path to your image file
-    file_css = 'styles.css'  # Replace with the path to your CSS file
+    file_path = 'v001\\index.html'  # Replace with your HTML file's path
+    file_image = 'v001\\nikhil.jpg'  # Replace with the path to your image file
+    file_css = 'v001\\styles.css'  # Replace with the path to your CSS file
     
     # Receive the HTTP request from the client
     request = client.recv(1024).decode()
